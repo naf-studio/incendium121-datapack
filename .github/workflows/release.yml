@@ -1,0 +1,25 @@
+name: Release datapack
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create datapack zip
+        run: |
+          zip -r naf-incendium121-plugin.zip data pack.mcmeta
+
+      - name: Create github release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: incendium121.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
