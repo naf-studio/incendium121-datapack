@@ -14,7 +14,7 @@ jobs:
 
       - name: Create datapack zip
         run: |
-          zip -r naf-incendium121-plugin.zip data pack.mcmeta
+          zip -r incendium121.zip data pack.mcmeta
 
       - name: Create github release
         uses: softprops/action-gh-release@v2
