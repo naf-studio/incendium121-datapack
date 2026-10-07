@@ -1,0 +1,22 @@
+name: "Feature Request"
+description: "Suggest a configuration option or enhancement for the datapack"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest an idea to improve the Incendium 121 datapack.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What challenge or missing capability does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the dimension attribute change or pack enhancement.
+    validations:
+      required: true

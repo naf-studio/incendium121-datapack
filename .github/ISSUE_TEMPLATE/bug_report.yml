@@ -1,0 +1,38 @@
+name: "Bug Report"
+description: "Report a portal calculation issue, load warning, or datapack error"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please describe the problem below.
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of the observed behavior.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Minecraft Version & Server Software
+      description: E.g., Minecraft 1.21.1, Paper, Purpur, Fabric, or Vanilla Singleplayer.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the issue.
+      placeholder: |
+        1. Place Nether portal at coordinates X, Y, Z
+        2. Enter Nether
+        3. Observe exit coordinates
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Server Console Logs
+      description: Paste relevant server logs or datapack loading warnings.
